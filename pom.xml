@@ -2,16 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.bazaarvoice.commons</groupId>
-        <artifactId>bv-opensource-super-pom</artifactId>
-        <version>1.0</version>
-    </parent>
-
     <groupId>com.bazaarvoice.maven.plugins</groupId>
     <artifactId>process-exec-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>0.8-SNAPSHOT</version>
+    <version>0.9</version>
 
     <name>Process execution maven plugin</name>
 
@@ -112,5 +106,11 @@
                 <version>2.5.1</version>
             </plugin>
         </plugins>
+        <extensions> <extension>
+    <groupId>org.apache.maven.wagon</groupId>
+    <artifactId>wagon-webdav-jackrabbit</artifactId>
+    <version>2.2</version></extension>
+</extensions>
+
     </build>
 </project>
